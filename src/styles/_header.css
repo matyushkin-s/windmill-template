@@ -1,0 +1,72 @@
+header {
+  min-height: var(--header-heigh);
+  background-color: #505050;
+  box-shadow: 0 1px 8px #505050;
+}
+
+nav {
+  height: 100%;
+  font-size: 19px;
+}
+
+#hamburger-btn {
+  position: relative;
+  background-color: #202020;
+  height: var(--header-heigh);
+  width: var(--hamburger-menu-width);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.menu-item {
+  height: var(--header-heigh);
+  font-size: 24px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item-icon {
+  padding-left: 15px;
+  width: var(--hamburger-menu-width);
+}
+
+#hamburger-btn:active,
+#hamburger-btn:focus + .hamburger-menu {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: var(--header-heigh);
+  left: 0;
+  flex-direction: column;
+  width: var(--hamburger-menu-width);
+  height: calc(100% - var(--header-heigh));
+  background-color: #202020;
+}
+
+.hamburger-menu:hover {
+  width: 185px;
+}
+
+.menu-item-text {
+  display: none;
+}
+
+.hamburger-menu:hover .menu-item-text {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+a.menu-item:hover {
+  background-color: #3a3a3a;
+}
+
+a.menu-item:hover > .menu-item-icon {
+  color: #fff;
+}
